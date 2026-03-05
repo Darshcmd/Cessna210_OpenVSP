@@ -1,62 +1,80 @@
-# Cessna 210 (NASA Variant) – OpenVSP Aircraft Model
+# Cessna 210 (NASA Variant) — OpenVSP Aircraft Model
 
-## Indian Space Labs Winter Internship Project
+<div align="center">
 
-This project was completed as part of the **Indian Space Labs Winter Internship Training Program** conducted under **IIT Madras and ISRO** in the domain of **Advanced Drone Technology**.
+![OpenVSP](https://img.shields.io/badge/OpenVSP-Aircraft%20Modelling-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
+![Domain](https://img.shields.io/badge/Domain-Aerospace%20Design-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge)
 
-The objective of this internship project was to **recreate the Cessna 210 (NASA Variant) aircraft geometry using OpenVSP**, an open-source parametric aircraft modeling software developed by NASA.
+**Parametric 3D reconstruction of the Cessna 210 (NASA Variant) using OpenVSP**  
+*Indian Space Labs Winter Internship — Advanced Drone Technology | IIT Madras & ISRO*
 
-The project focuses on understanding **aircraft geometry modelling, parametric design, and aircraft component structures** using engineering reference drawings.
-
----
-
-# Project Overview
-
-The aircraft model was created in **OpenVSP** using **3-view reference drawings (Top, Side, and Front views)** and the **background image tracing method**.
-
-The following aircraft components were modeled:
-
-- Fuselage
-- Main Wing
-- Horizontal Tail
-- Vertical Tail
-- Propeller
-
-A **simple human dummy model** was also added inside the cockpit to provide a **scale reference for pilot seating and cockpit space visualization**.
+</div>
 
 ---
 
-# Software Used
+## Table of Contents
 
-**OpenVSP (Open Vehicle Sketch Pad)**  
-An open-source aircraft geometry modeling tool developed by **NASA**.
-
-Download: https://openvsp.org/
-
----
-
-# Methodology
-
-The aircraft model was created using the **background image tracing technique** in OpenVSP.
-
-1. The measurement units were configured in OpenVSP to maintain consistent scaling.
-2. The provided **3-view aircraft drawing** was loaded as a **background reference image**.
-3. The fuselage was created using the **XSec Editor** by adjusting cross-sections to match the aircraft outline from the reference image.
-4. The main wing was created by setting parameters such as **span, root chord, tip chord, taper ratio, sweep angle, and dihedral angle**.
-5. Separate wing geometries were used to design the **horizontal tail and vertical tail**, which were scaled and positioned at the rear of the fuselage.
-6. A **propeller geometry** was added at the nose of the aircraft.
-7. A **human dummy model** was placed inside the cockpit to represent pilot scale.
+- [Overview](#overview)
+- [Software](#software)
+- [Methodology](#methodology)
+- [Aircraft Parameters](#aircraft-parameters)
+- [Results](#results)
+- [Repository Structure](#repository-structure)
+- [Learning Outcomes](#learning-outcomes)
+- [Author](#author)
 
 ---
 
-# Aircraft Parameters Used
+## Overview
 
-The aircraft dimensions were **approximately estimated from the 3-view reference drawing** used during modelling.
+This project was completed as part of the **Indian Space Labs Winter Internship Training Program**, conducted under **IIT Madras and ISRO** in the domain of **Advanced Drone Technology**.
 
-### Wing Parameters
+The objective was to **recreate the Cessna 210 (NASA Variant) aircraft geometry** using **OpenVSP** — an open-source parametric aircraft geometry modelling tool developed by NASA — working from 3-view engineering reference drawings and applying background image tracing for dimensional accuracy.
+
+The project covers:
+- Aircraft geometry interpretation from 2D engineering drawings
+- Parametric component-level modelling in OpenVSP
+- Structural decomposition: fuselage, wing, tail assembly, and propeller
+- Cockpit-scale visualization using a human dummy reference model
+
+---
+
+## Software
+
+| Tool | Description |
+|------|-------------|
+| **OpenVSP (Open Vehicle Sketch Pad)** | Open-source aircraft geometry modelling software developed by NASA |
+| **Version** | Latest stable release |
+| **Download** | [https://openvsp.org/](https://openvsp.org/) |
+
+---
+
+## Methodology
+
+The model was built using the **background image tracing method** in OpenVSP — loading 3-view reference drawings (Top, Side, Front) as background images and constructing geometry over them.
+
+### Step-by-Step Process
+
+1. **Unit Configuration** — Set measurement units in OpenVSP for consistent scaling across all components.
+2. **Reference Image Setup** — Loaded the 3-view aircraft drawing as a background reference in each viewport.
+3. **Fuselage Modelling** — Used the **XSec Editor** to define and adjust cross-sectional profiles matching the fuselage outline.
+4. **Main Wing** — Defined wing geometry using parameters: span, root chord, tip chord, taper ratio, sweep angle, and dihedral angle.
+5. **Tail Assembly** — Modelled the **horizontal stabilizer** and **vertical tail** as separate wing geometries, scaled and positioned at the fuselage rear.
+6. **Propeller** — Added propeller geometry at the aircraft nose.
+7. **Human Dummy Model** — Placed inside the cockpit as a pilot-scale reference for cabin space visualization.
+
+---
+
+## Aircraft Parameters
+
+All dimensions were **approximately estimated from the 3-view reference drawing** used during modelling.
+
+### Wing
 
 | Parameter | Value |
-|----------|------|
+|-----------|-------|
 | Wing Span | ~11 m |
 | Root Chord | ~1.6 m |
 | Tip Chord | ~0.8 m |
@@ -67,73 +85,78 @@ The aircraft dimensions were **approximately estimated from the 3-view reference
 ### Fuselage
 
 | Parameter | Value |
-|----------|------|
+|-----------|-------|
 | Fuselage Length | ~8.6 m |
 | Maximum Cabin Width | ~1.2 m |
-| Tail Taper | Gradually reduced towards rear |
+| Tail Taper | Gradual reduction toward rear |
 
 ### Tail Section
 
 | Parameter | Value |
-|----------|------|
+|-----------|-------|
 | Horizontal Tail Span | ~4 m |
 | Vertical Tail Height | ~2 m |
 
 ---
 
-# Results
+## Results
 
-The final OpenVSP model successfully recreated the **Cessna 210 aircraft geometry**.
+The final OpenVSP model successfully reconstructed the **Cessna 210 (NASA Variant)** geometry with the following outcomes:
 
-Key outcomes:
-
-- Correct alignment of **fuselage, wings, and tail**
-- Smooth aerodynamic surface geometry
-- Proper proportional scaling based on reference drawings
-- Addition of a **human dummy model** to represent cockpit scale
-
-The aircraft model is saved as a **`.vsp3` file**, which can be further used for **aerodynamic analysis, design modification, and simulation in OpenVSP**.
+- Accurate alignment of fuselage, main wing, and tail assembly
+- Smooth aerodynamic surface continuity across all components
+- Proportional scaling consistent with the 3-view reference drawings
+- Cockpit-scale validation via human dummy placement
+- Model exported as a `.vsp3` file ready for aerodynamic analysis, design iteration, or simulation workflows
 
 ---
 
-# Deliverables
-
-This repository contains the following files:
-
-- OpenVSP aircraft model file (`.vsp3`)
-- 3-view screenshots of the aircraft model
-  - Top View
-  - Side View
-  - Front View
-- Project report document
-- Reference images used for modelling
-
----
-
-# Learning Outcomes
-
-Through this internship project, the following skills were developed:
-
-- Aircraft geometry interpretation
-- Parametric aircraft modeling
-- Using OpenVSP for aerospace design
-- Understanding aircraft structural components
-- Converting 2D engineering drawings into 3D models
+## Repository Structure
+```
+cessna-210-openvsp/
+│
+├── model/
+│   └── cessna_210_nasa.vsp3          # OpenVSP aircraft model file
+│
+├── screenshots/
+│   ├── top_view.png
+│   ├── side_view.png
+│   └── front_view.png
+│
+├── references/
+│   └── 3view_reference_drawing.*     # Reference images used for modelling
+│
+└── report/
+    └── project_report.pdf            # Full internship project report
+```
 
 ---
 
-# Author
+## Learning Outcomes
 
-**Darsh Soni**
+Through this project, the following competencies were developed:
 
-Indian Space Labs  
-Winter Internship Training Program  
-Advanced Drone Technology  
+- Interpreting 2D engineering drawings for 3D reconstruction
+- Parametric aircraft geometry modelling in OpenVSP
+- Understanding aircraft structural components and their spatial relationships
+- Applying XSec-based fuselage design methodology
+- Translating real-world aircraft reference data into simulation-ready 3D models
 
+---
+
+## Author
+
+**Darsh Soni**  
+B.Tech Computer Science Engineering (AI & Robotics) — VIT Chennai  
+Indian Space Labs Winter Internship — Advanced Drone Technology  
 Under **IIT Madras and ISRO**
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-darshsoni04-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/darshsoni04)
+[![GitHub](https://img.shields.io/badge/GitHub-Darshcmd-181717?style=flat&logo=github)](https://github.com/Darshcmd)
+
 ---
 
-# License
+## License
 
-This project is for **educational and internship purposes only**.
+This project is intended for **educational and internship purposes only**.  
+All aircraft reference data is used strictly for academic modelling and learning.
